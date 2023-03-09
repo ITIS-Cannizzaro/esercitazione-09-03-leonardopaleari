@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // Chiamare la classe col proprio cognome
-public class MainClass
+public class paleari
 {
 	static Scanner in = new Scanner(System.in);
 	
@@ -15,7 +15,7 @@ public class MainClass
 			{
 				//aggiungere, togliere casi a seconda delle proprie scelte
 				case 1:
-					//Inserire metodo statico
+					es1();
 				break;
 				case 2:
 					//Inserire metodo statico
@@ -39,5 +39,27 @@ public class MainClass
 		System.out.println("5 - Es n. * - Titolo es. *");
 	}
 	
-	// Aggiungere qui i metodi statici relativi agli esercizi scelti
+	static void es1()
+	{
+		double [] array1=new double[4];
+		for(int i =0; i<array1.length;i++)
+		{
+			array1[i]=(Math.random()*10);
+		}
+		for(int i=0;i<array1.length;i++)
+			System.out.println(array1[i]);
+		
+		double [] array2=new double[array1.length/2];
+		int k=0;
+		System.out.println("secondo array:");
+		for(int i=0; i<array1.length; i+=2)
+		{
+		
+		    array2[k]=array1[i]*array1[i+1];
+		    k++;
+		   
+		}
+		for(int i=0;i<array2.length;i++)
+			System.out.println(array2[i]);  
+	}
 }
