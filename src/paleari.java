@@ -39,27 +39,28 @@ public class paleari
 		System.out.println("5 - Es n. * - Titolo es. *");
 	}
 	
-	static void es1()
+	static void es1()//commento
 	{
 		double [] array1=new double[4];
+		//creo un array che sarà riempito con numeri casuali double
 		for(int i =0; i<array1.length;i++)
 		{
 			array1[i]=(Math.random()*10);
 		}
-		for(int i=0;i<array1.length;i++)
+		for(int i=0;i<array1.length;i++)//stampa array1
 			System.out.println(array1[i]);
 		
-		double [] array2=new double[array1.length/2];
-		int k=0;
+		double [] array2=new double[array1.length/2];//creo un nuovo array che sarà grande la metà di array1
+		int k=0;//creo una variabile che mi aiuterà a incrementare l'indice di array2
 		System.out.println("secondo array:");
-		for(int i=0; i<array1.length; i+=2)
+		for(int i=0; i<array1.length; i+=2)//creo un ciclo per incrementare la i di 2 in 2 per far si che salti dall'elemnto 0 all'elemento 2
 		{
 		
-		    array2[k]=array1[i]*array1[i+1];
-		    k++;
+		    array2[k]=array1[i]*array1[i+1];//prodotto per trovare gli elementi di array2
+		    k++;//incremento k per passare alla seconda moltiplicazione
 		   
 		}
-		for(int i=0;i<array2.length;i++)
+		for(int i=0;i<array2.length;i++)//stampa array2
 			System.out.println(array2[i]);  
 	}
 }
