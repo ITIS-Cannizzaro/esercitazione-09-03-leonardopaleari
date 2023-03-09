@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 // Chiamare la classe col proprio cognome
@@ -18,7 +19,7 @@ public class paleari
 					es1();
 				break;
 				case 2:
-					//Inserire metodo statico
+					es2();
 				break;
 				case 3:
 					//Inserire metodo statico
@@ -62,5 +63,28 @@ public class paleari
 		}
 		for(int i=0;i<array2.length;i++)//stampa array2
 			System.out.println(array2[i]);  
+	}
+	static void es2() 
+	{
+		String [] array1=new String[5];
+		for(int i =0; i<array1.length;i++)
+		{
+			System.out.println("scrivi una parola per riemprire il primo array:");
+			array1[i]=in.nextLine();
+		}
+		String [] array2=new String[5];
+		for(int j =0; j<array2.length;j++)
+		{
+			System.out.println("scrivi una parola per riempire il secondo array:");
+			array2[j]=in.nextLine();
+		}
+		for(int i=0;i<array1.length;i++)
+			for(int j=array2.length-1;j>=0;j++)
+		       if(array1[i] == array2[j])
+		       {
+			    System.out.println("OK");
+		       }
+		       else 
+		    	System.out.println("NO");   
 	}
 }
